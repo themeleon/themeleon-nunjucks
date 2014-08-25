@@ -11,7 +11,7 @@ module.exports = function (nunjucks) {
   var renderFile = q.denodeify(nunjucks.render);
   var writeFile = q.denodeify(fs.writeFile);
 
-  function NunjucksCompile(src, dest) {
+  function nunjucksCompile(src, dest) {
     if (typeof dest === 'undefined') {
       dest = src;
     }
@@ -21,9 +21,9 @@ module.exports = function (nunjucks) {
     this.push(renderFile(src, this.ctx).then(writeIndex));
   }
 
-  NunjucksCompile.configure = nunjucks.configure;
+  nunjucksCompile.configure = nunjucks.configure;
 
   return {
-    nunjucks: NunjucksCompile
+    nunjucks: nunjucksCompile
   };
 };
