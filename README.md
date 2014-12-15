@@ -3,6 +3,9 @@ Themeleon Nunjucks
 
 > [Nunjucks] mixin for [Themeleon].
 
+**Warning:** this repository/package is deprecated, template engines
+will be handled by consolidate.js in Themeleon 3.0.
+
 [Nunjucks]: http://mozilla.github.io/nunjucks
 [Themeleon]: https://github.com/themeleon/themeleon
 
